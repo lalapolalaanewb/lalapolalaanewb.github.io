@@ -144,7 +144,7 @@ body.light .main {
 body.light .main div.bgmain1 {
   -webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
   clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
-  background-image: url("images/bg texture (accents).png");
+  background-image: url("images/bg texture (accents).jpg");
 }
 
 body.light .main section.profile {
@@ -271,7 +271,7 @@ body.light .main section.skills .cardsskill .box div.primarybg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("images/bg texture (dark).png");
+  background-image: url("images/bg texture (dark).jpg");
   z-index: -1;
 }
 
@@ -279,6 +279,7 @@ body.light .main section.skills .cardsskill .box div.cardbg0 {
   -webkit-clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
   clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
   background-color: #242941;
+  opacity: 70%;
 }
 
 body.light .main section.skills .cardsskill .box .content {
@@ -383,7 +384,7 @@ body.light .main section.skills .cardsskill .box:hover::before {
 }
 
 body.light .main section.projects {
-  background-image: url("images/bg texture (dark).png");
+  background-image: url("images/bg texture (dark).jpg");
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -410,7 +411,7 @@ body.light .main section.projects div.bgpattern {
   height: 100%;
   -webkit-clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
   clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
-  background-image: url("images/bg texture (accents).png");
+  background-image: url("images/bg texture (accents).jpg");
 }
 
 body.light .main section.projects h1.titlebg {
@@ -706,7 +707,7 @@ body.light .main section.projects div.cardsproject .swiper-container .swiper-sli
     height: 100%;
     -webkit-clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
-    background-image: url("images/bg texture (accents).png");
+    background-image: url("images/bg texture (accents).jpg");
     z-index: -1;
   }
   body.light .main section.skills h1.titlebg {
@@ -917,7 +918,7 @@ body.light .main section.projects div.cardsproject .swiper-container .swiper-sli
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("images/bg texture (accents).png");
+    background-image: url("images/bg texture (accents).jpg");
     z-index: -1;
   }
   body.light .main section.skills h1.titlebg {
