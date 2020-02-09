@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- import custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- import card swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <title>Portfolio V2</title>
+</head>
+<body class="light">
+
+    <!-- main content -->
+    <div class="main">
+        <!-- bg pattern left-below-->
+        <div class="bgmain1"></div>
+
+        <!-- top navigation bar -->
+        <nav>
+            <a href="/index.html" class="logo">L<span>pN</span>b</a>
+            <ul>
+                <li><a href="https://github.com/lalapolalaanewb" target="_blank" data-text="Github">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/mohamad-fathi-mhd-noor-100aa1147/" target="_blank" data-text="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </nav>
+
+        <!-- section profile -->
+        <section class="profile">
+            <h1 class="name">Fathi N<span class="o1">o</span><span class="o2">o</span>r</h1>
+            <h2 class="job">Full Stack Developer - Backend Driven</h2>
+            <div class="cta">
+                <a href="/file/RESUME GLOBAL FATHI NOOR.pdf" target="_blank">Get Resume</a>
+            </div>
+        </section>
+
+        <!-- section skills -->
+        <section class="skills">
+            <!-- bg pattern right-below (on tablet view)-->
+            <div class="bgskillstab"></div>
+            <h1 class="titlebg">Ski<span class="l1">l</span><span class="l2">l</span>s</h1>
+            <div class="cardsskill">
+                <div class="box">
+                    <div class="primarybg"></div>
+                    <div class="cardbg0"></div>
+                    <div class="content">
+                        <img src="/images/window_accents.png" alt="front-end">
+                        <h1>Front End</h1>
+                        <div class="skilldesc">
+                            <p>HTML5</p>
+                            <p>CSS | SCSS</p>
+                            <p>Ionic</p>
+                            <p>JavaScript</p>
+                            <p>React</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="primarybg"></div>
+                    <div class="cardbg0"></div>
+                    <div class="content">
+                        <img src="/images/share_accents.png" alt="server">
+                        <h1>Server</h1>
+                        <div class="skilldesc">
+                            <p>CodeIgniter</p>
+                            <p>Yii2</p>
+                            <p>Cake</p>
+                            <p>Angular JS</p>
+                            <p>Node JS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="primarybg"></div>
+                    <div class="cardbg0"></div>
+                    <div class="content">
+                        <img src="/images/database_accents.png" alt="database">
+                        <h1>Database</h1>
+                        <div class="skilldesc">
+                            <p>MySQL</p>
+                            <p>SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="primarybg"></div>
+                    <div class="cardbg0"></div>
+                    <div class="content">
+                        <img src="/images/cloud_accents.png" alt="deployment">
+                        <h1>Deployment</h1>
+                        <div class="skilldesc">
+                            <p>Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section projects -->
+        <section class="projects">
+            <div class="bgpattern"></div>
+            <h1 class="titlebg"><span class="p1">P</span><span class="p2">r</span><span class="p3">o</span>jects</h1>
+            <div class="cardsproject">
+                <div class="swiper-container" id="wordpress">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide parent">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <h1>WordPress CMS Website</h1>
+                            <div class="iconsproject">
+                                <img src="/images/wordpress_accents.png" alt="wordpress_icon">
+                            </div>
+                            <img src="/images/arrow_right accents.png" alt="arrow_right" class="arrow">
+                        </div>                  
+                        <div class="swiper-slide child">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <div class="cta-project">
+                                <a href="https://www.toyyibandimlicious.com/" target="_blank"><img src="/images/www.png" alt="www_icon"></a>
+                                <!-- <a href="#" target="_blank"><img src="/images/coding.png" alt="coding_icon"></a> -->
+                            </div>
+                            <h1>Toyyiban DimLicious</h1>
+                            <div class="textproject">
+                                <p>Custom CSS</p>
+                                <p>MySQL</p>
+                            </div>
+                            <img src="/images/arrow_left accents.png" alt="arrow_right" class="arrow">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container" id="php">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide parent">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <h1>PHP Based Frameworks</h1>
+                            <div class="iconsproject">
+                                <img src="/images/codeIgniter_accents.png" alt="codeigniter_icon">
+                                <img src="/images/cakephp_accents.png" alt="cake_icon">
+                                <img src="/images/yii-framework_accents.png" alt="yii_icon">
+                            </div>
+                            <img src="/images//arrow_right accents.png" alt="arrow_right" class="arrow">
+                        </div>                  
+                        <div class="swiper-slide child">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <div class="cta-project">
+                                <a href="https://metsonline.stats.gov.my/" target="_blank"><img src="/images/www.png" alt="www_icon"></a>
+                                <a href="https://github.com/lalapolalaanewb/sub-metsonline" target="_blank"><img src="/images/coding.png" alt="coding_icon"></a>
+                            </div>
+                            <h1>METS Online</h1>
+                            <div class="textproject">
+                                <p>HTML5, CSS | SCSS, Vanilla JavaScript</p>
+                                <p>Yii2 Framework</p>
+                                <p>SQL Server</p>
+                            </div>
+                            <img src="/images/arrow_left accents.png" alt="arrow_right" class="arrow">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container" id="javascript">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide parent">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <h1>Javascript Based Frameworks</h1>
+                            <div class="iconsproject">
+                                <img src="/images/angular_accents.png" alt="angular_icon">
+                                <img src="/images/javascript_accents.png" alt="javascript_icon">
+                                <img src="/images/react-native_accents.png" alt="react_icon">
+                            </div>
+                            <img src="/images/arrow_right accents.png" alt="arrow_right" class="arrow">
+                        </div>                  
+                        <div class="swiper-slide child">
+                            <div class="cardbg0"></div>
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg1">
+                            <img src="/images/bg texture (accents).png" alt="card_bg_image" class="cardbg2">
+                            <div class="cta-project">
+                                <a href="#" target="_blank"><img src="/images/www.png" alt="www_icon"></a>
+                                <a href="#" target="_blank"><img src="/images/coding.png" alt="coding_icon"></a>
+                            </div>
+                            <h1>Portfolio V1</h1>
+                            <div class="textproject">
+                                <p>HTML5, CSS | SCSS, Vanilla Javascript</p>
+                            </div>
+                            <img src="/images/arrow_left accents.png" alt="arrow_right" class="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- import Jquery dependacies -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- import card swiper.js -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- import custom javascript -->
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>

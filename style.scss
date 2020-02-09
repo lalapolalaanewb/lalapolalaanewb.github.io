@@ -1,0 +1,956 @@
+// import required fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+// border check purposees only
+$bordercheck: 1px red solid;
+
+// viewport
+$sectionviewport: 100vh;
+
+// titlebg
+%titlebg {
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+// colors
+$color: (
+    primary: #242941,
+    accents: #22D1EE,
+    dark: #0E153A,
+    softlight:#E2F3F5,
+    whitey: #FFFFFF
+);
+@function color($color-name) {
+    @return map-get($color, $color-name)
+};
+
+// font weights properties
+$fontweight: (
+    semi-bold: 600,
+    regular: 400
+);
+@function fontweight($font-weight) {
+    @return map-get($fontweight, $font-weight)
+};
+
+// font sizes properties
+$fontsize: (
+    regular: 16px,
+    title: 20px
+);
+@function fontsize($font-size) {
+    @return map-get($fontsize, $font-size)
+};
+
+// cardbg objects
+%cardbg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+// arrow animation
+%arrowanimation {
+    transform: translateX(0);
+    animation: mvltr 0.5s infinite;
+    animation-direction: alternate;
+    
+    @keyframes mvltr{
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(5px);
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Desktop Styles */
+body.light {
+    position: relative;
+
+    nav {
+        // border: $bordercheck;
+        grid-area: profiles;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        padding: 0 100px;
+        overflow-y: auto;
+        z-index: 10;
+
+        a.logo {
+            color: color(dark);
+            font-size: 30px;
+            font-weight: fontweight(semi-bold);
+            letter-spacing: 2px;
+            text-decoration: none;
+
+            span {
+                color: color(accents);
+            }
+        }
+
+        ul {
+            // border: $bordercheck;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            li {
+                padding-left: 30px;
+                overflow: hidden;
+                position: relative;
+
+                a {
+                    display: inline-block;
+                    color: color(dark);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: fontweight(semi-bold);
+                    transition: 0.5s ease-in-out;
+                }
+
+                a::before {
+                    content: attr(data-text);
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    color: color(accents);
+                }
+            }
+
+            li:hover {
+                a {
+                    transform: translateY(-100%);
+                    color: color(whitey);
+                }
+            }
+        }
+    }
+
+    .main {
+        min-height: $sectionviewport;
+        position: relative;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "profiles projects"
+            "skills projects";
+
+        // bg pattern left-below
+        div.bgmain1 {
+            @extend %cardbg;
+            -webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
+            clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
+            background-image: url("images/bg\ texture\ \(accents\).png");
+        }
+        
+        section.profile {
+            // border: $bordercheck;
+            grid-area: profiles;
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                color: color(dark);
+                font-size: 129px;
+                font-weight: fontweight(semi-bold);
+                position: relative;
+
+                span.o1, .o2 {
+                    display: inline-block;
+                    color: color(accents);
+                    transform: translateY(0);
+                    transition: 0.5s ease-in-out;
+                }
+
+                span.o1:hover, span.o2:hover {
+                    transform: translateY(-10px);
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            h2 {
+                color: color(dark);
+                font-size: 43px;
+                font-weight: fontweight(regular);
+                opacity: 60%
+            }
+
+            .cta {
+                padding-top: 30px;
+                
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: color(whitey);
+                    background-color: color(accents);
+                    font-weight: fontweight(semi-bold);
+                    display: inline-block;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        section.skills {
+            // border: $bordercheck;
+            grid-area: skills;
+            align-self: center;
+
+            div.bgskillstab {
+                display: none;
+            }
+
+            h1.titlebg {
+                // border: $bordercheck;
+                position: absolute;
+                color: color(softlight);
+                @extend %titlebg;
+                letter-spacing: 15px;
+                align-self: center;
+                bottom: 0%;
+                left: 49%;
+                z-index: -1;
+            }
+
+            .cardsskill {
+                // border: $bordercheck;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-content: center;
+                padding: 0 100px;
+
+                .box {
+                    position: relative;
+                    width: 246px;
+                    height: 346px;
+    
+                    div.primarybg {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("images/bg\ texture\ \(dark\).png");
+                        z-index: -1;
+                    }
+    
+                    div.cardbg0 {
+                        @extend %cardbg;
+                        -webkit-clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+                        clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+                        background-color: color(primary);
+                    }
+    
+                    .content {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 2fr;
+                        grid-template-areas: 
+                            "title-parent-skills"
+                            "text-parent-skills";
+    
+                        img {
+                            width: 42px ;
+                            height: 33.25px;
+                            position: absolute;
+                            justify-self: center;
+                            align-self: start;
+                            transition: 0.5s;
+                            margin-top: 40px;
+                            opacity: 10%;
+                        }
+                        
+                        h1 {
+                            // border: $bordercheck;
+                            grid-area: title-parent-skills;
+                            height: 130px;
+                            color: color(whitey);
+                            font-size: 20px;
+                            font-weight: fontweight(semi-bold);
+                            text-transform: uppercase;
+                            text-align: center;
+                            line-height: 220px;
+                        }
+    
+                        div.skilldesc {
+                            // border: $bordercheck;
+                            grid-area: text-parent-skills;
+                            height: 216px;
+                            display: flex;
+                            flex-flow: column wrap;
+                            padding: 30px 0px;
+    
+                            p {
+                                color: color(whitey);
+                                text-align: center;
+                                padding: 5px;
+                            }
+    
+                            p:after {
+                                content: "";
+                                width: 50%;
+                                height: 2px;
+                                background-color: color(accents);
+                                position: absolute;
+                                left: 25%;
+                                margin-top: 21px;
+                                opacity: 20%;
+                            }
+                        }
+                    }
+                }
+    
+                .box:hover {
+                    .content {
+                        img {
+                            align-self: start;
+                            margin-top: 20px;
+                            width: 84px;
+                            height: 66.5px;
+                            opacity: 100%;
+                        }
+                    }
+                }
+                .box::before {
+                    content: "";
+                    position: absolute;
+                    background: color(accents);
+                    top: -2px;
+                    left: -2px;
+                    right: -2px;
+                    bottom: -2px;
+                    transform: skew(5deg, 5deg);
+                    z-index: -1;
+                    transition: 0.5s;
+                }
+    
+                .box:hover::before {
+                    transform: skew(-5deg, -5deg);
+                }
+            }
+        }
+
+        section.projects {
+            // border: $bordercheck;
+            background-image: url("images/bg\ texture\ \(dark\).png");
+            grid-area: projects;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            div.bgpattern {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                // half half
+                // -webkit-clip-path: polygon(100% 0, 100% 50%, 95% 4%, 50% 0);
+                // clip-path: polygon(100% 0, 100% 50%, 95% 4%, 50% 0);
+                // full half
+                -webkit-clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
+                clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
+                background-image: url("images/bg\ texture\ \(accents\).png");
+            }
+
+            h1.titlebg {
+                // border: $bordercheck;
+                position: absolute;
+                color: color(primary);
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                @extend %titlebg;
+                margin-left: 130px;
+            }
+
+            div.cardsproject {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 0;
+                position: relative;
+
+                .swiper-container {
+                    width: 223px;
+                    height: 253px;
+                    margin: 10px 0;
+                    position: relative;
+    
+                    .hide {
+                        display: none;
+                    }
+    
+                    .swiper-slide.parent {
+                        // border: $bordercheck;
+                        position: relative;
+                        background-color: color(whitey);
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 2fr 2fr 1fr;
+                        grid-template-areas: 
+                            "title-parent-project"
+                            "icon-parent-project"
+                            "arrow-parent-project";
+    
+                        div.cardbg0 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+                            clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+                            background-color: color(softlight);
+                        }
+    
+                        // right-side pattern
+                        img.cardbg1 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(50% 0, 100% 0, 100% 50%, 92% 8%);
+                            clip-path: polygon(50% 0, 100% 0, 100% 50%, 92% 8%);
+                        }
+        
+                        // left-side pattern
+                        img.cardbg2 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+                            clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+                        }
+    
+                        h1 {
+                            // border: $bordercheck;
+                            grid-area: title-parent-project;
+                            color: color(dark);
+                            font-size: 20px;
+                            font-weight: fontweight(semi-bold);
+                            text-transform: uppercase;
+                            text-align: center;
+                            align-self: flex-end;
+                        }
+    
+                        div.iconsproject {
+                            // border: $bordercheck;
+                            grid-area: icon-parent-project;
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-evenly;
+                            align-items: center;
+    
+                            img {
+                                width: 42px;
+                                height: 42px;
+                            }
+                        }
+    
+                        img.arrow {
+                            grid-area: arrow-parent-project;
+                            // border: $bordercheck;
+                            width: 17px;
+                            height: 15px;
+                            justify-self: center;
+                            align-self: center;
+                            @extend %arrowanimation;
+                        }
+    
+                    }
+        
+                    .swiper-slide.child {
+                        // border:$bordercheck;
+                        position: relative;
+                        background-color: color(whitey);
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 2fr 3fr 1fr;
+                        grid-template-areas: 
+                            "title-child-project"
+                            "icon-child-project"
+                            "arrow-child-project";
+    
+                        div.cardbg0 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(0 0, 0 36%, 100% 36%, 100% 0);
+                            clip-path: polygon(0 0, 0 36%, 100% 36%, 100% 0);
+                            background-color: color(softlight);
+                        }
+    
+                        img.cardbg1 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%, 8% 92%);
+                            clip-path: polygon(0 50%, 0 100%, 50% 100%, 8% 92%);
+                        }
+        
+                        img.cardbg2 {
+                            @extend %cardbg;
+                            -webkit-clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+                            clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+                        }
+    
+                        div.cta-project {
+                            grid-area: title-child-project;
+                            position: absolute;
+                            display: flex;
+                            flex-flow: column wrap;
+                            justify-self: end;
+                            align-self: flex-end;
+                            position: relative;
+    
+                            a {
+                                text-decoration: none;
+    
+                                img {
+                                    width: 25px;
+                                    height: 25px;
+                                    margin: 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+    
+                        h1 {
+                            // border: $bordercheck;
+                            grid-area: title-child-project;
+                            color: color(dark);
+                            font-size: 20px;
+                            font-weight: fontweight(semi-bold);
+                            text-transform: uppercase;
+                            text-align: center;
+                            align-self: center;
+                            padding: 0 40px;
+                        }
+    
+                        div.textproject {
+                            // border: $bordercheck;
+                            grid-area: icon-child-project;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            flex-flow: column wrap;
+                            justify-content: center;
+                            padding: 5px 5px;
+    
+                            p {
+                                color: color(dark);
+                                text-align: center;
+                                padding: 5px;
+                            }
+    
+                            p:after {
+                                content: "";
+                                width: 50%;
+                                height: 2px;
+                                background-color: color(accents);
+                                position: absolute;
+                                left: 25%;
+                                margin-top: 21px;
+                                opacity: 20%;
+                            }
+                        }
+    
+                        img.arrow {
+                            // border: $bordercheck;
+                            grid-area: arrow-child-project;
+                            width: 17px;
+                            height: 15px;
+                            justify-self: center;
+                            align-self: center;
+                            @extend %arrowanimation;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 416px) and (max-width: 1024px) {
+    body.light {
+        nav {
+            grid-area: tab-profile;
+        }
+
+        .main {
+            // border: $bordercheck;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+                "tab-profile"
+                "tab-skills"
+                "tab-projects";
+            position: relative;
+
+            // bg pattern left-below
+            div.bgmain1 {
+                grid-area: tab-profile;
+                -webkit-clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+                clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+            }
+            
+            section {
+                height: $sectionviewport;
+            }
+
+            section.profile {
+                // border: $bordercheck;
+                grid-area: tab-profile;
+            }
+
+            section.skills {
+                // border: $bordercheck;
+                grid-area: tab-skills;
+                position: relative;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-around;
+
+                // bg pattern left-below
+                div.bgskillstab {
+                    border: $bordercheck;
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
+                    clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
+                    background-image: url("images/bg\ texture\ \(accents\).png");
+                    z-index: -1;
+                }
+
+                h1.titlebg {
+                    // border: $bordercheck;
+                    position: relative;
+                    color: color(dark);
+                    text-align: center;
+                    left: 0%;
+                    margin-top: 30px;
+                    z-index: 1;
+
+                    span {
+                        color: color(accents);
+                        display: inline-block;
+                    }
+
+                    span.l1 {
+                        transform: translateY(0);
+                        animation: mvltr 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr{
+                            0% {
+                                transform: translateY(0);
+                            }
+                            100% {
+                                transform: translateY(5px);
+                            }
+                        }
+                    }
+                    span.l2 {
+                        transform: translateY(5px);
+                        animation: mvltr2 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr2{
+                            0% {
+                                transform: translateY(5px);
+                            }
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+
+                .cardsskill {
+                    // border: $bordercheck;
+
+                    .box {
+                        margin: 30px 0;
+                    }
+                }
+            }
+
+            section.projects {
+                border: $bordercheck;
+                grid-area: tab-projects;
+                flex-flow: column wrap;
+                position: relative;
+                justify-content: space-around;
+
+                div.bgpattern {
+                    // full half
+                    -webkit-clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+                    clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+                }
+
+                h1.titlebg {
+                    // border: $bordercheck;
+                    writing-mode: horizontal-tb;
+                    text-orientation: mixed;
+                    position: relative;
+                    color: color(whitey);
+                    text-align: center;
+                    margin-left: 0;
+                    z-index: 1;
+
+                    span {
+                        color: color(accents);
+                        display: inline-block;
+                    }
+
+                    span.p1, .p3 {
+                        transform: translateY(0);
+                        animation: mvltr 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr{
+                            0% {
+                                transform: translateY(0);
+                            }
+                            100% {
+                                transform: translateY(5px);
+                            }
+                        }
+                    }
+                    span.p2 {
+                        transform: translateY(5px);
+                        animation: mvltr2 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr2{
+                            0% {
+                                transform: translateY(5px);
+                            }
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+
+                div.cardsproject {
+                    flex-flow: row wrap;
+
+                    .swiper-container {
+                        margin: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 415px) {
+    body.light {
+        nav {
+            grid-area: tab-profile;
+            padding: 0 50px;
+        }
+
+        .main {            
+            // border: $bordercheck;
+            height: 3500px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+                "tab-profile"
+                "tab-skills"
+                "tab-projects";
+            position: relative;
+
+            // bg pattern left-below
+            div.bgmain1 {
+                grid-area: tab-profile;
+                -webkit-clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+                clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+            }
+
+            // section {
+            //     height: 0px;
+            // }
+
+            section.profile {
+                // border: $bordercheck;
+                grid-area: tab-profile;
+
+                h1 {
+                    font-size: 60px;
+                }
+    
+                h2 {
+                    padding-top: 10px;
+                    font-size: 28px;
+                    width: 65%;
+                    text-align: center;
+                }
+            }
+
+            section.skills {
+                // border: $bordercheck;
+                grid-area: tab-skills;
+                position: relative;
+                display: flex;
+                flex-flow: column wrap;
+
+                // bg pattern left-below
+                div.bgskillstab {
+                    // border: $bordercheck;
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("images/bg\ texture\ \(accents\).png");
+                    z-index: -1;
+                }
+
+                h1.titlebg {
+                    // border: $bordercheck;
+                    position: relative;
+                    color: color(dark);
+                    font-size: 60px;
+                    text-align: center;
+                    left: 0%;
+                    margin-top: 70px;
+                    z-index: 1;
+
+                    span {
+                        color: color(whitey);
+                        display: inline-block;
+                    }
+
+                    span.l1 {
+                        transform: translateY(0);
+                        animation: mvltr 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr{
+                            0% {
+                                transform: translateY(0);
+                            }
+                            100% {
+                                transform: translateY(5px);
+                            }
+                        }
+                    }
+                    span.l2 {
+                        transform: translateY(5px);
+                        animation: mvltr2 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr2{
+                            0% {
+                                transform: translateY(5px);
+                            }
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+
+                .cardsskill {
+                    padding: 70px 100px;
+
+                    .box {
+                        margin: 30px 0;
+                    }
+
+                    .box::before {
+                        background: color(whitey);
+                    }
+                }
+            }
+
+            section.projects {
+                // border: $bordercheck;
+                grid-area: tab-projects;
+                flex-flow: column wrap;
+                position: relative;
+                justify-content: space-around;
+
+                div.bgpattern {
+                    // full half
+                    -webkit-clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+                    clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+                }
+
+                h1.titlebg {
+                    // border: $bordercheck;
+                    writing-mode: horizontal-tb;
+                    text-orientation: mixed;
+                    position: relative;
+                    color: color(whitey);
+                    font-size: 60px;
+                    text-align: center;
+                    margin-left: 0;
+                    margin-top: 50px;
+                    z-index: 1;
+
+                    span {
+                        color: color(accents);
+                        display: inline-block;
+                    }
+
+                    span.p1, .p3 {
+                        transform: translateY(0);
+                        animation: mvltr 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr{
+                            0% {
+                                transform: translateY(0);
+                            }
+                            100% {
+                                transform: translateY(5px);
+                            }
+                        }
+                    }
+                    span.p2 {
+                        transform: translateY(5px);
+                        animation: mvltr2 0.5s infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes mvltr2{
+                            0% {
+                                transform: translateY(5px);
+                            }
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+
+                div.cardsproject {
+                    // border: $bordercheck;
+                    flex-flow: column wrap;
+                    justify-content: space-between;
+
+                    .swiper-container {
+                        margin: 30px 0px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

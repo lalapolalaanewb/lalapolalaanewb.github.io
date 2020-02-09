@@ -1,0 +1,1076 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+body.light .main section.skills h1.titlebg, body.light .main section.projects h1.titlebg {
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+body.light .main div.bgmain1, body.light .main section.skills .cardsskill .box div.cardbg0, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent div.cardbg0, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.cardbg1, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.cardbg2, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.cardbg0, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.cardbg1, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.cardbg2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.arrow, body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.arrow {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-animation: mvltr 0.5s infinite;
+          animation: mvltr 0.5s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes mvltr {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes mvltr {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Desktop Styles */
+body.light {
+  position: relative;
+}
+
+body.light nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profiles;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 100px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+body.light nav a.logo {
+  color: #0E153A;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+body.light nav a.logo span {
+  color: #22D1EE;
+}
+
+body.light nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+body.light nav ul li {
+  padding-left: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+body.light nav ul li a {
+  display: inline-block;
+  color: #0E153A;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body.light nav ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  color: #22D1EE;
+}
+
+body.light nav ul li:hover a {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  color: #FFFFFF;
+}
+
+body.light .main {
+  min-height: 100vh;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5fr 1fr;
+      grid-template-columns: 2.5fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "profiles projects" "skills projects";
+}
+
+body.light .main div.bgmain1 {
+  -webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
+  clip-path: polygon(0 50%, 0 100%, 50% 100%, 2% 96%);
+  background-image: url("images/bg texture (accents).png");
+}
+
+body.light .main section.profile {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profiles;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.light .main section.profile h1 {
+  color: #0E153A;
+  font-size: 129px;
+  font-weight: 600;
+  position: relative;
+}
+
+body.light .main section.profile h1 span.o1, body.light .main section.profile h1 .o2 {
+  display: inline-block;
+  color: #22D1EE;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body.light .main section.profile h1 span.o1:hover, body.light .main section.profile h1 span.o2:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body.light .main section.profile h2 {
+  color: #0E153A;
+  font-size: 43px;
+  font-weight: 400;
+  opacity: 60%;
+}
+
+body.light .main section.profile .cta {
+  padding-top: 30px;
+}
+
+body.light .main section.profile .cta a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #22D1EE;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+body.light .main section.skills {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: skills;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body.light .main section.skills div.bgskillstab {
+  display: none;
+}
+
+body.light .main section.skills h1.titlebg {
+  position: absolute;
+  color: #E2F3F5;
+  letter-spacing: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  bottom: 0%;
+  left: 49%;
+  z-index: -1;
+}
+
+body.light .main section.skills .cardsskill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 100px;
+}
+
+body.light .main section.skills .cardsskill .box {
+  position: relative;
+  width: 246px;
+  height: 346px;
+}
+
+body.light .main section.skills .cardsskill .box div.primarybg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/bg texture (dark).png");
+  z-index: -1;
+}
+
+body.light .main section.skills .cardsskill .box div.cardbg0 {
+  -webkit-clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+  clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+  background-color: #242941;
+}
+
+body.light .main section.skills .cardsskill .box .content {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas: "title-parent-skills" "text-parent-skills";
+}
+
+body.light .main section.skills .cardsskill .box .content img {
+  width: 42px;
+  height: 33.25px;
+  position: absolute;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 40px;
+  opacity: 10%;
+}
+
+body.light .main section.skills .cardsskill .box .content h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title-parent-skills;
+  height: 130px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 220px;
+}
+
+body.light .main section.skills .cardsskill .box .content div.skilldesc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text-parent-skills;
+  height: 216px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 30px 0px;
+}
+
+body.light .main section.skills .cardsskill .box .content div.skilldesc p {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+}
+
+body.light .main section.skills .cardsskill .box .content div.skilldesc p:after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #22D1EE;
+  position: absolute;
+  left: 25%;
+  margin-top: 21px;
+  opacity: 20%;
+}
+
+body.light .main section.skills .cardsskill .box:hover .content img {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin-top: 20px;
+  width: 84px;
+  height: 66.5px;
+  opacity: 100%;
+}
+
+body.light .main section.skills .cardsskill .box::before {
+  content: "";
+  position: absolute;
+  background: #22D1EE;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  -webkit-transform: skew(5deg, 5deg);
+          transform: skew(5deg, 5deg);
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body.light .main section.skills .cardsskill .box:hover::before {
+  -webkit-transform: skew(-5deg, -5deg);
+          transform: skew(-5deg, -5deg);
+}
+
+body.light .main section.projects {
+  background-image: url("images/bg texture (dark).png");
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: projects;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body.light .main section.projects div.bgpattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
+  clip-path: polygon(100% 0, 100% 50%, 94% 4%, 0 0);
+  background-image: url("images/bg texture (accents).png");
+}
+
+body.light .main section.projects h1.titlebg {
+  position: absolute;
+  color: #242941;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: 130px;
+}
+
+body.light .main section.projects div.cardsproject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  position: relative;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container {
+  width: 223px;
+  height: 253px;
+  margin: 10px 0;
+  position: relative;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .hide {
+  display: none;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent {
+  position: relative;
+  background-color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2fr 2fr 1fr;
+      grid-template-rows: 2fr 2fr 1fr;
+      grid-template-areas: "title-parent-project" "icon-parent-project" "arrow-parent-project";
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent div.cardbg0 {
+  -webkit-clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+  clip-path: polygon(0 0, 0 100%, 50% 100%, 50% 0);
+  background-color: #E2F3F5;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.cardbg1 {
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 50%, 92% 8%);
+  clip-path: polygon(50% 0, 100% 0, 100% 50%, 92% 8%);
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.cardbg2 {
+  -webkit-clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+  clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title-parent-project;
+  color: #0E153A;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent div.iconsproject {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: icon-parent-project;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent div.iconsproject img {
+  width: 42px;
+  height: 42px;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.parent img.arrow {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: arrow-parent-project;
+  width: 17px;
+  height: 15px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child {
+  position: relative;
+  background-color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2fr 3fr 1fr;
+      grid-template-rows: 2fr 3fr 1fr;
+      grid-template-areas: "title-child-project" "icon-child-project" "arrow-child-project";
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.cardbg0 {
+  -webkit-clip-path: polygon(0 0, 0 36%, 100% 36%, 100% 0);
+  clip-path: polygon(0 0, 0 36%, 100% 36%, 100% 0);
+  background-color: #E2F3F5;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.cardbg1 {
+  -webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%, 8% 92%);
+  clip-path: polygon(0 50%, 0 100%, 50% 100%, 8% 92%);
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.cardbg2 {
+  -webkit-clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+  clip-path: polygon(100% 50%, 100% 100%, 50% 100%, 92% 92%);
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.cta-project {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title-child-project;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  justify-self: end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.cta-project a {
+  text-decoration: none;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.cta-project a img {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title-child-project;
+  color: #0E153A;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0 40px;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.textproject {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: icon-child-project;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 5px;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.textproject p {
+  color: #0E153A;
+  text-align: center;
+  padding: 5px;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child div.textproject p:after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #22D1EE;
+  position: absolute;
+  left: 25%;
+  margin-top: 21px;
+  opacity: 20%;
+}
+
+body.light .main section.projects div.cardsproject .swiper-container .swiper-slide.child img.arrow {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: arrow-child-project;
+  width: 17px;
+  height: 15px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/* Tablet Styles */
+@media (min-width: 416px) and (max-width: 1024px) {
+  body.light nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+  }
+  body.light .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "tab-profile" "tab-skills" "tab-projects";
+    position: relative;
+  }
+  body.light .main div.bgmain1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+    -webkit-clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+  }
+  body.light .main section {
+    height: 100vh;
+  }
+  body.light .main section.profile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+  }
+  body.light .main section.skills {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: tab-skills;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body.light .main section.skills div.bgskillstab {
+    border: 1px red solid;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(94% 95%, 100% 0, 100% 100%, 0 100%);
+    background-image: url("images/bg texture (accents).png");
+    z-index: -1;
+  }
+  body.light .main section.skills h1.titlebg {
+    position: relative;
+    color: #0E153A;
+    text-align: center;
+    left: 0%;
+    margin-top: 30px;
+    z-index: 1;
+  }
+  body.light .main section.skills h1.titlebg span {
+    color: #22D1EE;
+    display: inline-block;
+  }
+  body.light .main section.skills h1.titlebg span.l1 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation: mvltr 0.5s infinite;
+            animation: mvltr 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  @keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  body.light .main section.skills h1.titlebg span.l2 {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-animation: mvltr2 0.5s infinite;
+            animation: mvltr2 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  body.light .main section.skills .cardsskill .box {
+    margin: 30px 0;
+  }
+  body.light .main section.projects {
+    border: 1px red solid;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tab-projects;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    position: relative;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body.light .main section.projects div.bgpattern {
+    -webkit-clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+    clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+  }
+  body.light .main section.projects h1.titlebg {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: 0;
+    z-index: 1;
+  }
+  body.light .main section.projects h1.titlebg span {
+    color: #22D1EE;
+    display: inline-block;
+  }
+  body.light .main section.projects h1.titlebg span.p1, body.light .main section.projects h1.titlebg .p3 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation: mvltr 0.5s infinite;
+            animation: mvltr 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  body.light .main section.projects h1.titlebg span.p2 {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-animation: mvltr2 0.5s infinite;
+            animation: mvltr2 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  body.light .main section.projects div.cardsproject {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  body.light .main section.projects div.cardsproject .swiper-container {
+    margin: 0 30px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 415px) {
+  body.light nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+    padding: 0 50px;
+  }
+  body.light .main {
+    height: 3500px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "tab-profile" "tab-skills" "tab-projects";
+    position: relative;
+  }
+  body.light .main div.bgmain1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+    -webkit-clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 6% 95%, 100% 100%, 0% 100%);
+  }
+  body.light .main section.profile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: tab-profile;
+  }
+  body.light .main section.profile h1 {
+    font-size: 60px;
+  }
+  body.light .main section.profile h2 {
+    padding-top: 10px;
+    font-size: 28px;
+    width: 65%;
+    text-align: center;
+  }
+  body.light .main section.skills {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: tab-skills;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  body.light .main section.skills div.bgskillstab {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/bg texture (accents).png");
+    z-index: -1;
+  }
+  body.light .main section.skills h1.titlebg {
+    position: relative;
+    color: #0E153A;
+    font-size: 60px;
+    text-align: center;
+    left: 0%;
+    margin-top: 70px;
+    z-index: 1;
+  }
+  body.light .main section.skills h1.titlebg span {
+    color: #FFFFFF;
+    display: inline-block;
+  }
+  body.light .main section.skills h1.titlebg span.l1 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation: mvltr 0.5s infinite;
+            animation: mvltr 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  @keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  body.light .main section.skills h1.titlebg span.l2 {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-animation: mvltr2 0.5s infinite;
+            animation: mvltr2 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  body.light .main section.skills .cardsskill {
+    padding: 70px 100px;
+  }
+  body.light .main section.skills .cardsskill .box {
+    margin: 30px 0;
+  }
+  body.light .main section.skills .cardsskill .box::before {
+    background: #FFFFFF;
+  }
+  body.light .main section.projects {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tab-projects;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    position: relative;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body.light .main section.projects div.bgpattern {
+    -webkit-clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+    clip-path: polygon(50% 100%, 96% 97%, 100% 49%, 100% 100%, 50% 100%, 0 100%, 0 50%, 4% 97%, 50% 100%);
+  }
+  body.light .main section.projects h1.titlebg {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 60px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 50px;
+    z-index: 1;
+  }
+  body.light .main section.projects h1.titlebg span {
+    color: #22D1EE;
+    display: inline-block;
+  }
+  body.light .main section.projects h1.titlebg span.p1, body.light .main section.projects h1.titlebg .p3 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation: mvltr 0.5s infinite;
+            animation: mvltr 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @keyframes mvltr {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  body.light .main section.projects h1.titlebg span.p2 {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-animation: mvltr2 0.5s infinite;
+            animation: mvltr2 0.5s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @keyframes mvltr2 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  body.light .main section.projects div.cardsproject {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body.light .main section.projects div.cardsproject .swiper-container {
+    margin: 30px 0px;
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
