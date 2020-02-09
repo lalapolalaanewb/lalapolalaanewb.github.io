@@ -210,6 +210,14 @@ body.light .main section.profile .cta a {
   display: inline-block;
   padding: 8px 10px;
   border-radius: 5px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body.light .main section.profile .cta a:hover {
+  background-color: #0E153A;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 body.light .main section.skills {
