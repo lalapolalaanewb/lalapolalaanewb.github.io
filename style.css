@@ -265,6 +265,7 @@ body.light .main section.skills .cardsskill .box {
   position: relative;
   width: 246px;
   height: 346px;
+  margin: 30px 0;
 }
 
 body.light .main section.skills .cardsskill .box div.primarybg {
