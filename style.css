@@ -653,6 +653,20 @@ body.light .main section.projects div.cardsproject .swiper-container .swiper-sli
       align-self: center;
 }
 
+/* 4k? */
+@media (min-width: 1024px) and (max-width: 1649px) {
+  body.light .main section.skills .cardsskill {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 50px;
+  }
+  body.light .main section.skills .cardsskill .box {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
 /* Tablet Styles */
 @media (min-width: 416px) and (max-width: 1024px) {
   body.light nav {

@@ -143,6 +143,7 @@ body.light {
     }
 
     .main {
+        // border: $bordercheck;
         min-height: $sectionviewport;
         position: relative;
         display: grid;
@@ -582,6 +583,29 @@ body.light {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+/* 4k? */
+@media (min-width: 1024px) and (max-width: 1649px) {
+    body.light {
+
+        .main {
+
+            section.skills {
+
+                .cardsskill {
+                    justify-content: center;
+                    padding-bottom: 50px;
+
+                    .box {
+                        margin-left: 30px;
+                        margin-right: 30px;
+                    }
+                }
+               
             }
         }
     }
