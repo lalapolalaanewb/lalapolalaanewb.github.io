@@ -655,6 +655,9 @@ body.light .main section.projects div.cardsproject .swiper-container .swiper-sli
 
 /* 4k? */
 @media (min-width: 1024px) and (max-width: 1660px) {
+  body.light .main section.skills h1.titlebg {
+    left: 40%;
+  }
   body.light .main section.skills .cardsskill {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
